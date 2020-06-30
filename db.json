@@ -29,6 +29,21 @@
       "nombre": "Vodka",
       "precio": 150,
       "id": 6
+    },
+    {
+      "nombre": "Tequila",
+      "precio": 150,
+      "id": 7
+    },
+    {
+      "nombre": "Banana",
+      "precio": 5,
+      "id": 8
+    },
+    {
+      "nombre": "Sandia",
+      "precio": 2,
+      "id": 9
     }
   ]
 }

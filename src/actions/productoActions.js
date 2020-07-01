@@ -1,3 +1,4 @@
+//json-server db.json --port 4000
 import {
     AGREGAR_PRODUCTO,
     AGREGAR_PRODUCTO_EXITO,
@@ -7,7 +8,10 @@ import {
     DESCARGA_PRODUCTOS_ERROR,
     OBTENER_PRODUCTO_ELIMINAR,
     PRODUCTO_ELIMINADOR_EXITO,
-    PRODUCTO_ELIMINADO_ERROR
+    PRODUCTO_ELIMINADO_ERROR,
+    OBTENER_PRODUCTO_EDITAR,
+    PRODUCTO_EDITADO_ERROR,
+    PRODUCTO_EDITADO_EXITO
 } from '../types'
 import clienteAxios from '../config/axios'
 import Swal from 'sweetalert2'
@@ -128,4 +132,16 @@ const eliminarProductoExito = () => ({
 const eliminarProductoError = () => ({
     type: PRODUCTO_ELIMINADO_ERROR,
     paylodad: true
+})
+
+//colocar producto en edicion
+export function obtenerProductoEditar(producto) {
+    return (dispatch) => {
+        dispatch( obtenerProductoEditarAction(producto) )
+    }
+}
+
+const obtenerProductoEditarAction = producto => ({
+    type: OBTENER_PRODUCTO_EDITAR,
+    paylodad: producto
 })

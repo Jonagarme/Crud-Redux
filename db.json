@@ -29,6 +29,11 @@
       "nombre": "Sandia",
       "precio": 2,
       "id": 9
+    },
+    {
+      "nombre": "Papa",
+      "precio": 3,
+      "id": 10
     }
   ]
 }
